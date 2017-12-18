@@ -1,0 +1,15 @@
+<ul>
+  <%@comments_by_parent_id = @comment.post.comments_by_parent_id%>
+  <%= render @comment %>
+</ul>
+
+Add Comment
+<form action="<%= comments_url %>" method="POST">
+  <%= auth_token %>
+  <input type="hidden" name="comment[parent_id]" value="<%= @comment.id %>">
+  <input type="hidden" name="comment[post_id]" value="<%= @comment.post_id %>">
+  <label>Body
+    <textarea name="comment[content]"></textarea>
+  </label>
+  <input type="submit">
+</form>

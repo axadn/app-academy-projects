@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: todos
+#
+#  id         :integer          not null, primary key
+#  body       :text             not null
+#  done       :boolean          not null
+#  title      :string           not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  body: MyText
+  done: false
+  title: MyString
+
+two:
+  body: MyText
+  done: false
+  title: MyString

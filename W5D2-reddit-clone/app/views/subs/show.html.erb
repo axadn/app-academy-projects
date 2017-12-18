@@ -1,0 +1,16 @@
+<h3><%= link_to "Back to Subs", subs_url %></h3>
+<%= render @sub %>
+<h2> Posts </h2>
+<ul>
+<%@sub.posts.includes(:votes).includes(:author).each do |post| %>
+  <li>
+    <%= render post %>
+    <%= post.vote_count %>
+    <div>
+      <%= button_to "upvote", '/posts/' + post.id.to_s + '/upvote' %>
+      <%= button_to "downvote", '/posts/' + post.id.to_s + '/downvote'%>
+    </div>
+  </li>
+<% end %>
+</ul>
+<%= button_to "Add Post", new_sub_post_url(@sub), method: :get %>

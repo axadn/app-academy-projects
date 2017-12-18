@@ -1,0 +1,16 @@
+
+#sign_out_in_banner{
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+#sign_out_in_banner ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+#sign_out_in_banner > ul > li{
+  padding-left: 5px;
+  padding-right: 5px;
+}

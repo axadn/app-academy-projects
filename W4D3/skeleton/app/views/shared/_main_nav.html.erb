@@ -1,0 +1,34 @@
+<header class="main-nav">
+	<nav class="left-nav">
+		<ul>
+			<li id="sections-sidebar-btn">
+				<button class="gray_button">
+					<i class="fa fa-bars"></i>
+					<span>SECTIONS</span>
+				</button>
+			</li>
+			<li id="search-modal-btn">
+				<button class="gray_button">
+					<i class="fa fa-search"></i>
+					<span>SEARCH</span>
+				</button>
+			</li>
+		</ul>
+	</nav>
+	<nav class="right-nav">
+		<ul>
+			<li>
+				<button class="blue_button">SUBSCRIBE NOW</button>
+			</li>
+			<li>
+				<button class="blue_button">LOG IN</button>
+			</li>
+			<li>
+				<button class="gray_button" id="gear-dropdown-btn">
+					<i class="fa fa-cog"></i>
+				</button>
+				<%= render partial: 'shared/gear_dropdown' %>
+			</li>
+		</ul>
+	</nav>
+</header>

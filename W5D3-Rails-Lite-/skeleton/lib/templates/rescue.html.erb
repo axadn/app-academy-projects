@@ -1,0 +1,7 @@
+: <%= e.message %>
+<h2> Stack Trace: </h2>
+<% e.backtrace.each do |line| %>
+  <%= line %> </br>
+<% end %>
+<h2> Preview : </h2>
+<pre><%= preview%></pre>

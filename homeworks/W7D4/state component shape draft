@@ -1,0 +1,79 @@
+General
+
+	App
+		NavBar
+			nav buttons search
+		MainPage
+			(other components nested here with routes)
+		Footer
+			Playback bar container
+				Playback bar
+
+
+
+
+Session Form Container
+	Session Form
+
+Search Results Index Container
+	search Results Index
+		
+user show container
+	user show page
+		user info
+		user songs index
+
+song upload container
+	song upload form
+
+song show container
+	song comment container
+		song comment form
+		song comments index
+
+feed index container
+	feed index
+
+
+{
+entities : {
+	songs: { 
+		357:{
+			id: 357,
+			title: "The Price of Freedom"
+			user_id: 123
+			description: "a sad song",
+			waveform_preview: [0.2, 0.5, 0.7, 0.8, 0.9]
+			},
+		420:{
+			id:420,
+			title: "Ode to Joy"
+			user_id: 124
+			description: "a joyous piece",
+			waveform_preview: [0.4, 0.8, 0.9, 0.8, 0.9]
+			}
+		},
+	users: {
+		124:{
+			id:124,
+			username: "Adan",
+			song_ids: [357, 420]
+		}
+	}
+ui : 
+	currentSong: {
+		id: 357,
+		data: 101010101010101....
+		currentPosition: "357ms" 
+	},
+
+	searchResults: {
+		ids: [357, 420]
+	},
+	feed: {
+		ids: [357, 420]
+	}
+}
+			
+			
+			

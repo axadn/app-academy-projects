@@ -1,0 +1,19 @@
+<table>
+  <tr>
+    <th>Title </th>
+    <th>Year</th>
+    <th>type</th>
+  </tr>
+  <%= render @album %>
+</table>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Order</th>
+    <th>Type</th>
+  </tr>
+  <%= render @album.tracks %>
+</table>
+<%= button_to "Add Track", new_album_track_url(@album), method: :get,
+class: "red_button submit" %>

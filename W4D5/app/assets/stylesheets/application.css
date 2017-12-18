@@ -1,0 +1,76 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #fef6f6;
+}
+body .site_name_banner{
+ align-self: center;
+ padding-bottom: 20px;
+}
+#main_banner{
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#main_banner h1{
+  display: inline;
+}
+.red_button{
+
+  color: white;
+  background-color: #9a1717;
+  border-radius: 3px;
+  min-width: 70px;
+  max-width: 150px;
+  height: 30px;
+  display: inline;
+  box-sizing: border-box;
+}
+
+.red_button:hover{
+  background-color: #5f0e0e;
+
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+form > input{
+  margin-top: 5px;
+}
+
+form  > label{
+  margin-top: 15px;
+}
+
+form div {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(5,20%);
+}
+
+form .submit{
+  align-self: center;
+}
+
+form input{
+  width: 80%;
+  align-content: flex-start;
+}

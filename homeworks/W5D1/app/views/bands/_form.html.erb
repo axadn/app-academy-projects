@@ -1,0 +1,8 @@
+<% method = (band.persisted? ? "patch" : "post") %>
+<% action = (band.persisted? ? band_url(params[:id]) : bands_url) %>
+<form action="<%=action%>" method = "post">
+  <input type="hidden" name="_method" value="<%=method%>">
+  <%= auth_token %>
+  <input type="text" value="<%=band.name%>" name="band[name]">
+  <input type="submit" class="red_button submit">
+</form>

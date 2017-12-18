@@ -1,0 +1,4 @@
+<% @cats.each do |cat| %>
+  <%= cat.name %>
+  <%= link_to("Cat page", "cats/#{cat.id}") %> <br></br>
+<% end %>

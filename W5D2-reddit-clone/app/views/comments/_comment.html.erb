@@ -1,0 +1,16 @@
+<li>
+<div>
+  <div>
+    <%= comment.author.username %> : <%= link_to "'#{comment.content}'", comment_url(comment) %>
+    <%= comment.vote_count %>
+    <%= button_to "upvote", '/comments/' + comment.id.to_s + '/upvote' %>
+    <%= button_to "downvote", '/comments/' + comment.id.to_s + '/downvote'%>
+  </div>
+<% @comments_by_parent_id[comment.id].each do |comment| %>
+  <ul>
+    <%= render comment %>
+  </ul>
+<% end %>
+
+</div>
+</li>

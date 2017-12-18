@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NinetyNineCats</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <div class="">
+      <% if logged_in? %>
+        <% current_user.sessions.each do |session| %>
+          <%= session.env%>
+          <form action="<%= session_url %>" method="post">
+            <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="hidden" name="session_token" value="<%= session.session_token %>">
+            <input type="submit" value="log out">
+          </form>
+        <% end %>
+      <% end %>
+    </div>
+    <% if logged_in?  %>
+      <p> Hello <%=current_user.user_name%> </p>
+      <%= button_to "Log out ", session_url, method: :delete %>
+    <% end %>
+
+    <% if flash[:errors] %>
+      <ul>
+      <% flash[:errors].each do |error| %>
+        <li><%= error%></li>
+        <% end %>
+      </ul>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

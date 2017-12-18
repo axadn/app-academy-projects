@@ -1,0 +1,12 @@
+<%= render @post %>
+<h2> associated subs </h2>
+<% @post.subs.each do |sub| %>
+  <%= link_to sub.title, sub_url(sub) %>
+<% end %>
+<h2>comments</h2>
+<ul>
+<%@comments_by_parent_id = @post.comments_by_parent_id %>
+<%= render @post.top_level_comments %>
+</ul>
+
+<%= link_to "Add Comment", new_post_comment_url(@post) %>

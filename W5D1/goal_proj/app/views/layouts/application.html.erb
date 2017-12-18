@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GoalProj</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+  <%= current_user.username if logged_in?  %>
+  <% if logged_in? %>
+    <%= button_to "Log out", session_url, method: :delete %>
+  <% end %>
+  <% if flash[:errors] %>
+    <% flash[:errors].each do |error| %>
+      <%= error %>
+      <% end %>
+      <% end %>
+  <body>
+    <%= yield %>
+  </body>
+</html>

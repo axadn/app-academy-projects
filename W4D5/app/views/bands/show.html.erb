@@ -1,0 +1,12 @@
+<%= render @band %>
+<h2> ALBUMS </h2>
+<table>
+  <tr>
+    <th>Title </th>
+    <th>Year</th>
+    <th>type</th>
+  </tr>
+    <%= render @band.albums %>
+</table>
+<%= button_to "ADD ALBUM",
+ new_band_album_url(@band.id), method: :get, class: "red_button submit"  %>

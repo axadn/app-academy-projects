@@ -1,0 +1,8 @@
+<form action ="<%= users_url %>" method="post">
+  <%= auth_token %>
+  <label for="email">Email</label>
+  <input type="text", name="user[email]" id="email">
+  <label for="password">Password</label>
+  <input type="password" name="user[password]" id="password">
+  <input type="submit" value="Sign up" class="red_button submit">
+</form>

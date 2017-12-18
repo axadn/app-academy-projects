@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MusicApp</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <div id="main_banner">
+      <div class="empty"></div>
+      <h1 class="site_name_banner">
+        Music app
+      </h1>
+      <%= render "layouts/sign_out_in_banner" %>
+    </div>
+    <% if flash[:errors] %>
+      <% flash[:errors].each do |error| %>
+        <%= error %>
+      <% end %>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

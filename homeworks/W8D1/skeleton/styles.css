@@ -1,0 +1,75 @@
+.splash_tagline{
+  font-size: 50px;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  bottom: 250px;
+  left: 340px;
+  width: 500px;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.user_bar{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: #324d48;
+  align-items: center;
+}
+
+.user_bar a, .user_bar p{
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  margin-left: 5px;
+  margin-right: 5px;
+  display: inline;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.user_bar a{
+  color: white;
+}
+.NavBar{
+  background-color: #324d48;
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.splash_img{
+  position: relative;
+  width: 1200px;
+}
+
+.splash_img img{
+  width: 100%;
+}
+
+.main_container{
+  margin: auto;
+  width: 1200px;
+}
+.NavLinkSet{
+  display: flex;
+  flex-direction:  row;
+  justify-content: space-around;
+}
+
+.NavLinkSet a{
+  border-radius: 3px;
+  border: 1px solid white;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  padding: 5px;
+
+  color: #deddbf;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.NavLinkSet a:hover{
+  color: rgb(255,255,255);
+}

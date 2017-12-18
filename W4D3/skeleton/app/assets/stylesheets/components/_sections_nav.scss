@@ -1,0 +1,22 @@
+.sections_list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 800px;
+  margin:auto;
+}
+.sections_list li{
+  padding: 5px;
+
+}
+.section_link:hover, #all_link:hover{
+  cursor:pointer;
+}
+.section_link:hover{
+  background-color: $light-gray;
+
+}
+
+#all_link:hover{
+  text-decoration: underline;
+}
